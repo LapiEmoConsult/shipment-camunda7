@@ -1,0 +1,79 @@
+{
+  "components": [
+    {
+      "text": "# Carrier Shipment Offer",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_0rg8m5r",
+        "columns": null
+      },
+      "id": "Field_09vxefj"
+    },
+    {
+      "label": "Description",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_17t7ld9",
+        "columns": 16
+      },
+      "id": "Field_1vlq4sz",
+      "key": "parcelDescription",
+      "readonly": "parcel.parcelDescription",
+      "disabled": true
+    },
+    {
+      "label": "Special Product",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0932116",
+        "columns": 6
+      },
+      "id": "Field_1pz0rb2",
+      "key": "isSpecialProduct",
+      "readonly": "parcel.isSpecialProduct",
+      "disabled": true
+    },
+    {
+      "label": "Fragile",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0932116",
+        "columns": 6
+      },
+      "id": "Field_1w3mv5f",
+      "key": "isFragile",
+      "readonly": "parcel.isFragile",
+      "disabled": true
+    },
+    {
+      "label": "Estimated Delivery Time",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_11g34gc",
+        "columns": null
+      },
+      "id": "Field_0441xym",
+      "key": "estimatedDeliveryTime"
+    },
+    {
+      "label": "Price",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0n45m1t",
+        "columns": null
+      },
+      "id": "Field_0a4eu0n",
+      "key": "price"
+    }
+  ],
+  "type": "default",
+  "id": "carrierForm",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.19.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.21.0",
+  "schemaVersion": 14
+}

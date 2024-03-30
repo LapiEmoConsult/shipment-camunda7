@@ -1,0 +1,147 @@
+{
+  "components": [
+    {
+      "text": "# Shipment",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_09tj3xd",
+        "columns": null
+      },
+      "id": "Field_1eqjhcj"
+    },
+    {
+      "label": "Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_07o4659",
+        "columns": 8
+      },
+      "id": "Field_0ehjvky",
+      "key": "senderName",
+      "readonly": "parcel.senderName",
+      "disabled": true
+    },
+    {
+      "label": "Email",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_07o4659",
+        "columns": 8
+      },
+      "id": "Field_0bqlfwn",
+      "key": "senderEmail",
+      "readonly": "parcel.senderEmail",
+      "disabled": true
+    },
+    {
+      "label": "Parcel Description",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_083j9hd",
+        "columns": null
+      },
+      "id": "Field_0o9oqhk",
+      "key": "parcelDescription",
+      "readonly": "paarcel.parcelDescription",
+      "disabled": true
+    },
+    {
+      "label": "Fragile",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_08ua6u6",
+        "columns": 7
+      },
+      "id": "Field_0lg8avp",
+      "key": "isFragile",
+      "readonly": "parcel.isFragile",
+      "disabled": true
+    },
+    {
+      "label": "Special Product",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_08ua6u6",
+        "columns": null
+      },
+      "id": "Field_0jgvn1d",
+      "key": "isSpecialProduct",
+      "readonly": "parcel.isSpecialProduct",
+      "disabled": true
+    },
+    {
+      "label": "Confirm that the good is well packaged",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0gudx73",
+        "columns": null
+      },
+      "id": "Field_153jyfx",
+      "key": "checkbox_bvfsol",
+      "validate": {
+        "required": true
+      },
+      "conditional": {
+        "hide": "=isPackageGoodTask != true"
+      }
+    },
+    {
+      "label": "Confirm that the paperwork has been added",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0qpdjue",
+        "columns": null
+      },
+      "id": "Field_02y32va",
+      "key": "checkbox_1qqppe",
+      "validate": {
+        "required": true
+      },
+      "conditional": {
+        "hide": "=isAddPaperworkTask != true"
+      }
+    },
+    {
+      "label": "Confirm that the post label has been filled correctly",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_08p4c9f",
+        "columns": null
+      },
+      "id": "Field_0nc9w0p",
+      "key": "checkbox_co2ko",
+      "conditional": {
+        "hide": "=isFillPostLabelTask != true"
+      },
+      "validate": {
+        "required": true
+      }
+    },
+    {
+      "label": "Confirm that an extra insurance has been taken ",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_057dr56",
+        "columns": null
+      },
+      "id": "Field_1k8wm1y",
+      "key": "checkbox_zn25cf",
+      "validate": {
+        "required": true
+      },
+      "conditional": {
+        "hide": "=isExtraInsuranceTask != true"
+      }
+    }
+  ],
+  "type": "default",
+  "id": "parcelForm",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.19.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.21.0",
+  "schemaVersion": 14
+}

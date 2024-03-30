@@ -1,0 +1,84 @@
+<form role="form">
+    <script cam-script type="text/form-script">
+        camForm.on('form-loaded', function() {
+            camForm.variableManager.fetchVariable('carrierPropositions');
+            camForm.variableManager.fetchVariable('parcelDescription');
+            camForm.variableManager.fetchVariable('senderName');
+            camForm.variableManager.fetchVariable('senderEmail');
+        });
+
+        camForm.on('variables-fetched', function() {
+            $scope.carrierPropositions = camForm.variableManager.variableValue('carrierPropositions');
+            $scope.parcelDescription = camForm.variableManager.variableValue('parcelDescription');
+            $scope.senderName = camForm.variableManager.variableValue('senderName');
+            $scope.senderEmail = camForm.variableManager.variableValue('senderEmail');
+        });
+    </script>
+
+    <div class="container-sm">
+        <h1>Assign Carrier</h1>
+
+        <div class="form-group">
+            <label>Sender Name</label>
+            <p>{{ senderName }}</p>
+        </div>
+
+        <div class="form-group">
+            <label>Sender Email</label>
+            <p>{{ senderEmail }}</p>
+        </div>
+
+        <div class="form-group">
+            <label>Parcel Description</label>
+            <p>{{ parcelDescription }}</p>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                   cam-variable-name="isFragile"
+                   cam-variable-type="Boolean" disabled>
+            <label class="form-check-label" for="flexCheckChecked">
+                Fragile
+            </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="specialProductId"
+                   cam-variable-name="isSpecialProduct"
+                   cam-variable-type="Boolean" disabled>
+            <label class="form-check-label" for="specialProductId">
+                Special Product
+            </label>
+        </div>
+
+        <h4 style="margin-top: 25px">Choose a carrier for this shipment</h4>
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Carrier's Name</th>
+                <th scope="col">Estimated Delivery Time</th>
+                <th scope="col">Price</th>
+                <th scope="col">Selected Carrier</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <tr ng-repeat="item in carrierPropositions">
+                <th scope="row">{{ $index + 1 }}</th>
+                <td>{{ item.name }}</td>
+                <td>{{ item.estimatedDeliveryTime }}</td>
+                <td>{{ item.price }}</td>
+                <td>
+                    <div class="form-check">
+                        <input class="form-check-input" name="flexRadioDefault"
+                               type="radio" value="">
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</form>
+

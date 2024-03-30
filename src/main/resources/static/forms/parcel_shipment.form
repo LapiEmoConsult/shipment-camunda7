@@ -1,0 +1,73 @@
+{
+  "components": [
+    {
+      "text": "# Ship My Parcel",
+      "label": "Text view",
+      "type": "text",
+      "layout": {
+        "row": "Row_09tj3xd",
+        "columns": null
+      },
+      "id": "Field_1eqjhcj"
+    },
+    {
+      "label": "Name",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0ovfblj",
+        "columns": null
+      },
+      "id": "Field_0ehjvky",
+      "key": "senderName"
+    },
+    {
+      "label": "Email",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0bq9rkk",
+        "columns": null
+      },
+      "id": "Field_0bqlfwn",
+      "key": "senderEmail"
+    },
+    {
+      "label": "Parcel Description",
+      "type": "textarea",
+      "layout": {
+        "row": "Row_0zp5ikk",
+        "columns": null
+      },
+      "id": "Field_0o9oqhk",
+      "key": "parcelDescription"
+    },
+    {
+      "label": "Fragile",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_0th66b7",
+        "columns": null
+      },
+      "id": "Field_0lg8avp",
+      "key": "isFragile"
+    },
+    {
+      "label": "Special Product",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1lf1v22",
+        "columns": null
+      },
+      "id": "Field_0jgvn1d",
+      "key": "isSpecialProduct"
+    }
+  ],
+  "type": "default",
+  "id": "shipmentForm",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.19.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.21.0",
+  "schemaVersion": 14
+}
